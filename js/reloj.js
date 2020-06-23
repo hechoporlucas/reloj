@@ -51,24 +51,29 @@ function obtenerHora(){
 
     if(fecha.getMinutes() < 10){
         numeroMinutos.innerText = "0" + fecha.getMinutes();
-    }else{
+    }
+    else{
         numeroMinutos.innerText = fecha.getMinutes();
     };
 
     if(fecha.getHours() < 10){
         numeroHoras.innerText = "0" + fecha.getHours();
-    }else if(fecha.getHours() > 13){
-        numeroHoras.innerText = "0" + (fecha.getHours() - 12);
-    }else{
-        numeroHoras.innerText = fecha.getHours();
     }
+    else if(fecha.getHours() > 13){
+        numeroHoras.innerText = "0" + (fecha.getHours() - 12);
+    }
+    else{
+        numeroHoras.innerText = fecha.getHours();
+    };
 
     let ampmTest = fecha.getHours() + fecha.getMinutes() + fecha.getSeconds();
     if(ampmTest < 12){
         ampm.innerText = "AM";
-    }else if(ampmTest > 12){
+    }
+    else if(ampmTest > 12){
         ampm.innerText = "PM";
-    }else{
+    }
+    else{
         ampm.innerText = "";
     };
 
